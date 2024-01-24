@@ -36,12 +36,16 @@ To get started with the Django E-Commerce Online Shop, follow these steps:
 
 4. Install dependencies:
 
-  pip install -r requirements.txt
+  ``` bash
+pip install -r requirements.txt
+```
 
 5. Apply database migrations:
 
-
+```bash
   python manage.py migrate
+  ```
+
   
 
 6. Run the development server:
