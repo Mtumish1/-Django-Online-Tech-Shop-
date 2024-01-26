@@ -117,6 +117,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+MEDIA_URL = 'media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+
+#MEDIA_URL is the base URL that serves media files uploaded by users. 
+#MEDIA_ROOT is the local path where these files reside, which you build by dynamically prepending the BASE_DIR variable.
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

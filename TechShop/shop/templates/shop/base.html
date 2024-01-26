@@ -1,0 +1,29 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} TechShop {% endblock %}</title>
+    <link href= "{% static "css/base.css" %}" rel="stylesheet">
+
+</head>
+<body>
+    <div id="header">
+        <a href="/" class="logo">TechShop</a>
+    </div>
+    <div id="subheader">
+        <div class="cart">
+            Your cart is empty. Please shop!
+        </div>
+    </div>
+    
+    <div id="content">
+        {%block content %}
+        {%endblock %}
+    </div>
+    
+</body>
+</html>
