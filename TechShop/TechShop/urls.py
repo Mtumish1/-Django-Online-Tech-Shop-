@@ -28,7 +28,7 @@ urlpatterns = [
  #I include URLs for the shop application under a custom namespace named shop
 
 if settings.DEBUG:
-    urlpatterns += static (setings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static (settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
     # Remember that you only serve static files this way during development.
     # In a production environment, you should never serve static files with Django;
