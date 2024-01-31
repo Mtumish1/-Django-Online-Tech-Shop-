@@ -57,7 +57,7 @@ class Cart(object):
         
         for item in cart.values():
             item['price'] = Decimal(item['price'])
-            item['total_price'] = item['price'] * item['quantity']
+            item['total_price'] = item['price'] * item['quantity'] #iterate over the cart items,converting each item's price back into decimal, and adding a total_price attribute to each item
             yield item
 
 # A custom __len__() method to return the total number of items stored in the cart
