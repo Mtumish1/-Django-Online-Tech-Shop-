@@ -35,7 +35,15 @@
 
 
                         <td>{{ product.name }}</td>
-                        <td>{{ item.quantity }}</td>
+                        <td>
+                            <form action="{ %url "cart:cart_add" product.id %}" method="post">
+                                {{item.update_quantity_form.Quantity}}
+                                {{ item.update_quantity_form.override }}
+                                <input type="submit" value="Update">
+                                {% csrf_token %}
+                                
+                            </form>
+                        </td>
 
                         <td>
                             <form action="{% url "cart:cart_remove" product.id %}" method="post">
