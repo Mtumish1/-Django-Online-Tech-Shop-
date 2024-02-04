@@ -70,6 +70,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'cart.context_processors.cart', #The cart context processor will be executed every time a template is rendered using Django's RequestContext. 
             ],
         },
     },
