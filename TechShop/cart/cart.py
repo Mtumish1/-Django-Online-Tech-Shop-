@@ -12,7 +12,7 @@ class Cart(object):
         self.session = request.session #You store the current session using self.session = request.session to make it accessible to the other methods of the Cart class.
         cart = self.session.get(settings.CART_SESSION_ID)
         if not cart:
-            cart = self.session [settings.CART_SESSION_ID]
+            cart = self.session [settings.CART_SESSION_ID] = {}
         self.cart = cart
 
 
@@ -63,7 +63,7 @@ class Cart(object):
 # A custom __len__() method to return the total number of items stored in the cart
 
     def __len__(self):
-        return sum(itemz['quantity'] for item in self.cart.values())
+        return sum(item['quantity'] for item in self.cart.values())
 
 # A method to calculate the total cost of the items in the cart
 
