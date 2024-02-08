@@ -14,7 +14,7 @@ class Order(models.Model):
     estate = models.CharField(max_length=250)
     created = models.DateField(auto_now_add=True)
     updated = models.DateField(auto_now=True)
-    paid = models.BooleanField(default=False)
+    paid = models.BooleanField(default=False) #  This field differentiates between paid and unpaid orders
 
     class Meta:
         ordering = ('-created',)
