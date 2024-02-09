@@ -33,6 +33,10 @@ ALLOWED_HOSTS = []
 
 CART_SESSION_ID = 'cart'
 
+#  Tell Django to write emails to the console
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 # Application definition
 
 INSTALLED_APPS = [
