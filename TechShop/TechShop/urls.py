@@ -25,9 +25,13 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('cart/', include('cart.urls', namespace= 'cart')),
     path('orders/', include('orders.urls', namespace='orders')),
+    path('payment/', include('payment.urls', namespace='payment')),
     path('', include('shop.urls', namespace='shop')),
 ]
- #I include URLs for the shop application under a custom namespace named shop
+
+
+ #I include URLs for the shop application under a custom namespace named shop.
+ # Remember that Django runs through each URL pattern in order and stops at the first one that matches the requested URL.
 
 if settings.DEBUG:
     urlpatterns += static (settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

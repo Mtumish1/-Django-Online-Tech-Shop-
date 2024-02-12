@@ -15,6 +15,9 @@ class Order(models.Model):
     created = models.DateField(auto_now_add=True)
     updated = models.DateField(auto_now=True)
     paid = models.BooleanField(default=False) #  This field differentiates between paid and unpaid orders
+    braintree_id = models.CharField(max_length=150, blank=True) # This will allow you to link each order with its related Braintree transaction.
+
+
 
     class Meta:
         ordering = ('-created',)
