@@ -49,6 +49,11 @@ INSTALLED_APPS = [
     'shop.apps.ShopConfig',
     'cart.apps.CartConfig',
     'orders.apps.OrdersConfig',
+    'payment.apps.PaymentConfig',
+
+
+
+
 ]
 
 MIDDLEWARE = [
@@ -112,6 +117,21 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
+# Payment settings
+# Braintree settings
+BRAINTREE_MERCHANT_ID = '2fm49rr9xpp3hg63' # Merchant ID
+BRAINTREE_PUBLIC_KEY = 'gcpzgrg2gbhx8n3v' # Public Key
+BRAINTREE_PRIVATE_KEY = 'd4ac9bca2dc21a76b377dd2373419d33' # Private key
+
+import braintree
+
+BRAINTREE_CONF = braintree.Configuration(
+    braintree.Environment.Sandbox,
+    BRAINTREE_MERCHANT_ID,
+    BRAINTREE_PUBLIC_KEY,
+    BRAINTREE_PRIVATE_KEY
+)
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
