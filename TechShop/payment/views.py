@@ -6,7 +6,7 @@ from orders.models import Order
 
 # instantiate Braintree payment gateway
 
-gateway = Braintree.BraintreeGateway(settings.BRAINTREE_CONF)
+gateway = braintree.BraintreeGateway(settings.BRAINTREE_CONF)
 
 def payment_process(request):
     order_id = request.session.get('order_id')
